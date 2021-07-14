@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+
+.navbar ul li a:hover{
+    background-color: #34306a;
+    color: black;
+    box-shadow: 0 0 10px #34306a;
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 80px 0;
+    max-width: 1200px;
+    position: relative;
+}
+/* Inicio section*/
+
+#Inicio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#Inicio::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('/imagenes/pc1.svg') black;
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 100px;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.main img{
+    height: 400px;
+}
+
+.main span{
+    color: white;
+}
+
+.cabeza{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+    color: #34306a;
+}
+
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid #34306a;
+    color: white;
+    transition: .6s ease;
+    text-decoration: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #34306a;
+    color: black;
+    box-shadow: 0 0 5px #34306a, 0 0 10px #34306a, 0 0 15px #34306a;
+    font-weight: bold;
+}
+
+/* Sobre mi section*/
+
+.Sobre{
+   text-align: center;
+   padding-top: 30px;
+
+}
+
+.subtitulo{
+    color: black;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.foto{
+   width: 350px;
+   height: 350px;
+   border-radius: 50%;
+   margin-bottom: 100px;
+   object-fit: cover;
+   object-position: bottom;
+}
+
+.sobremi__parrafo{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+
+/* Habilidades */
+
+.Habilidades{
+    background-image: #f3f3f3;  
+}
+ 
+.habilidades__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+    
+ }
+
+.habilidades__grid > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.habilidades__grid img{
+    width: 50%;
+    margin-left: 50px;
+    height: 300px;
+    object-fit: scale-down;
+    transition: transform 0.5s;
+    cursor: pointer;
+    
+}
+
+.habilidades__grid a:hover img{
+    filter: drop-shadow(0 0 10px #34306a);
+    transform: scale(1.3);
+}
+
+
+.habilidades:hover{
+    transform:scale(100%);
+}
+/* Footer */
+
+footer{
+    position: absolute;
+    background: #191919;
+    height: auto;
+    width: 100vw;
+    font-family: "Open Sans";
+    padding-top: 40px;
+    color: white;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h1{
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social li{
+    margin: 0 20px;
+
+}
+.social a{
+    text-decoration: none;
+    color: white;
+}
+
+.social a i{
+    font-size: 2.5rem;
+    transition: color .4s ease;
+}
+.social a:hover i{
+    color: #34306a;
+
+}
+
+.footer-bottom{
+    background: #34306a;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+
+/* tablet */
+
+@media screen and (max-width: 780px){
+
+    #Inicio::before{
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .habilidades__grid{
+        text-align: center;
+    
+    }
+
+    .cabeza{
+        text-align: center;
+
+    }
+
+}
+ 
+
+
